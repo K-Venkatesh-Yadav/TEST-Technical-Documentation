@@ -1,0 +1,14 @@
+site_name: TEST
+
+nav:
+- Home: home.md
+- Copyright: copyright.md
+- TOC: toc.md
+- Getting Started: content.md
+- Release Notes: release notes.md
+
+theme:
+  name: mkdocs
+
+plugins:
+- search
