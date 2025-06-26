@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Getting Started - TEST</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">TEST</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../home/" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../copyright/" class="nav-link">Copyright</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../toc/" class="nav-link">TOC</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Getting Started</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../release%20notes/" class="nav-link">Release Notes</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../toc/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../release%20notes/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#1-foundation-base-introduction" class="nav-link">1. Foundation Base Introduction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#2-design-principles" class="nav-link">2. Design Principles</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#3-login-process" class="nav-link">3. Login Process</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#4-the-identity-provider" class="nav-link">4. The Identity Provider</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="1-foundation-base-introduction"><strong>1. Foundation Base Introduction</strong></h1>
+<p><em>1.1. About This Document</em></p>
+<p>This document describes how to use GE’s common technology stack, called Foundation, to build
+containerized applications on Kubernetes.</p>
+<p><em>1.2. Purpose of This Document</em></p>
+<p>This document contains a guide into all functional areas of Foundation.</p>
+<p><em>1.3. Who Should Use This Document</em></p>
+<p>This document is intended for individuals who are building applications on top of the Foundation
+layers.</p>
+<p><em>1.4. Related Resources</em></p>
+<p>For more information about Foundation, refer to the following:</p>
+<pre><code>Foundation Base Release Notes: Provides release-specific information, including hardware and software prerequisites.
+
+Foundation Base Installation Guide: Describes how to install the Foundation Base system.
+</code></pre>
+<p><em>1.5. System Overview</em></p>
+<p>Foundation is a set of Kubernetes-based solution components that support security and monitoring features for specific GE products built on top of it (for example, Outage Assist and Internal Notifications). Foundation deployment, scaling, and management are implemented using Kubernetes.</p>
+<p>Foundation is comprised of a number of different layers:</p>
+<p><strong>Kubernetes</strong>: RKE2-based deployment of Kubernetes.</p>
+<p><strong>Base</strong>: Core capabilities such as security, logging, monitoring, and data-stores.</p>
+<p><strong>OSB</strong>: Integration layer, including messaging and integration patterns.</p>
+<p><strong>UI Server</strong>: Server-side components to aid with UI-based applications.</p>
+<p>Foundation Base Introduction                             Proprietary - See Copyright Page
+Foundation 25r04 Base User Guide</p>
+<h1 id="2-design-principles"><strong>2. Design Principles</strong></h1>
+<p><em>2.1. API Design</em></p>
+<p>As more microservices are exposing their APIs to the web browser, developers should follow a
+model that can be expanded with new APIs and new versions, while at the same time creating new
+APIs without conflicting with other developments.</p>
+<p>The following model is strongly recommended for the paths of the services exposed outside the
+Kubernetes cluster: <a href="https://">/component/api/v<version number>/endpoint</a></p>
+<p>For example: <a href="https://">/aorManager/api/v2/aors/idp/api/v1/login</a></p>
+<p>To ensure consistency, permissions associated with those endpoints should take the application or component name as the first part of the permission name. For example, to call the endpoint <a href="https://">/aorManager/api/v2/aors</a> we should have a permission named after the application or component name; in our case, it would be aorManager.aors.read.readAll.</p>
+<p>The microservice implementing the API should not be aware of the first part of the path (for example, aorman, idp, etc.). For the microservice, the endpoints are /api/v…. That means the API Gateway will have to rewrite the path to remove the first part. That also means you can port the service from one path to another (at the API Gateway level) without having to recompile the microservice.</p>
+<p><em>2.2. Security Components and Naming Conventions</em></p>
+<p>Component Description aorManager API for the AOR Manager sessionManager API for the API Gateway Session Manager (deals with existing sessions and termination of sessions) roleManager API for the Role Manager idp API for the Identity Provider, including SAML2 endpoints, login and domains.</p>
+<p><em>2.3. Approach to Secure UI Applications</em></p>
+<p>This section describes the recommended approach for authentication/authorization when there are
+several Foundation Base applications that you want to combine and deploy on a single Kubernetes</p>
+<p>Some of the applications may be available to some users, but not others.</p>
+<p>A common architecture of a web application that consists of a UI (Web Server) and an API (API
+Service) is deployed as follows:</p>
+<p>The UI is implemented by a web server (such as NGINX or Apache) serving static files. The API is implemented by one or multiple microservices, written in Java, for example.</p>
+<p>The proposed approach consists of adding the Istio sidecar proxy in front of both the web server and the microservice(s). The API Gateway will continue to enforce authentication; the UI cannot be accessed unless the user has been authenticated. The authorization aspect is enforced by the sidecar proxy; only users with certain permissions in their roles will be able to receive resources (for example, JavaScript, HTML, and images). If not authorized, the sidecar proxy will return a 403 HTTP
+code, which is intercepted by the API Gateway to display an error page that says "You are not authorized to access this page".</p>
+<p><em>2.4. Secret Management</em></p>
+<p>Refer to Secret Management for more information about how to handle secrets in Foundation Base and applications based on it.</p>
+<p><em>2.5. Certificate Management</em></p>
+<p>Refer to Certificate Management for more information about how to handle certificates in Foundation Base and applications based on it.</p>
+<h1 id="3-login-process"><strong>3. Login Process</strong></h1>
+<p>This chapter explains the login process when a user accesses a service from the web browser. As an example, the Admin Console service is used, which is accessed from the /secadmin/ path.</p>
+<p>Figure 2. <u>Login Process Stage 1</u></p>
+<p>The process starts with a user who wants to access the Admin Console service by entering the URL (<a href="https://">https://<cluster-name>/secadmin/</a>) in a web browser (User Agent).</p>
+<p>The request arrives at the API Gateway. The API Gateway then checks to see if there is already a ookie associated with the request (there is none). The API Gateway replies with a 302 /login to redirect the User Agent.</p>
+<p>The User Agent requests /login at the API Gateway. The API Gateway creates a session associated with this User Agent and replies with 302 /uaa/oauth/authorize to redirect the User Agent.</p>
+<p>The User Agent requests /uaa/oauth/authorize, which the API Gateway forwards to UAA as /oauth/authorize to begin the OAuth2 Authorization Code grant flow. The UAA replies with 302 /uaa/login to redirect the User Agent.</p>
+<p>The User Agent requests /uaa/login, which the API Gateway forwards to UAA as /login. The UAA is configured to use an external SAML Identity Provider (IdP), which it replies with 302 /uaa/saml/discovery to redirect the User Agent to acquire the SAML IdP information.</p>
+<p>The User Agent requests /uaa/saml/discovery, which the API Gateway forwards to UAA a /saml/discovery. The UAA replies with 302 /uaa/saml/login/alias/cloudfoundry-saml-login to redirect the User Agent.</p>
+<p>The User Agent requests /uaa/saml/login/alias/cloudfoundry-saml-login, which the API Gateway forwards to the UAA as /saml/login/alias/cloudfoundry-saml-login. The UAA replies with 302 /idp/saml2/SingleSignOnService to redirect the User Agent to the URL for the SAML IdP.</p>
+<p>Figure 3. <u>Login Process Stage 2</u></p>
+<p>The User Agent requests /idp/saml2/SingleSignOnService, which the API Gateway forwards to the IdP as /saml2/SingleSignOnService. The IdP processes the SAML request and creates a cookie to identify this login request. The IdP replies with 302 /idp/ to redirect the User Agent.</p>
+<p>The User Agent requests /idp/, which the API Gateway forwards to the IdP. The IdP responds with the login page for the user to enter credentials.</p>
+<p>User credentials are entered and submitted to the IdP. The IdP validates the user credentials with an LDAP server (not shown); if successful, it creates a SAML response that it embeds into an autopost page. The IdP replies with 302 /idp/saml2/autopost to redirect the User Agent.</p>
+<p>Figure 4. <u>Login Process Stage 3</u></p>
+<p>The User Agent requests the /idp/saml2/autopost endpoint, which the API Gateway forwards to the IdP. The IdP generates the SAML Response for UAA and replies with 302 /uaa/saml/SSO/alias/cloudfoundry-saml-login to redirect the User Agent.</p>
+<p>The User Agent requests /uaa/saml/SSO/alias/cloudfoundry-saml-login, which the API Gateway forwards to UAA. The UAA processes the SAML response to accept the authenticated user and replies with 302 /uaa/oauth/authroize to redirect the User Agent.</p>
+<p>The User Agent requests /uaa/oauth/authorize, which the API Gateway forwards to UAA. The UAA generates the authorization code and encodes it with the response, and then replies with 302 /callback.</p>
+<p>The User Agent requests /callback with the authorization code. The API Gateway extracts the authorization code and sends a /oauth/token request to UAA to get the access token. The UAA verifies the authorization code and issues the Bearer Token in response to the API Gateway. The API Gateway stores the Bearer Token into a distributed cache. Then the API Gateway replies with 302/secadmin/ to redirect the User Agent to the originally requested URL.</p>
+<p>The User Agent requests /secadamin/. The API Gateway use the cookie from the User Agent to locate the Bearer Token from the distributed cache and validates whether the token has not expired. If valid, the API Gateway forwards the request to the Sec Admin UI, which is the service for /secadmin/.</p>
+<h1 id="4-the-identity-provider"><strong>4. The Identity Provider</strong></h1>
+<p>Customers may use the SAML Identity Provider (IdP) implementation that comes with Foundation Base, or they may connect to their own Identity Provider (such as SimpleSAMLphp, Okta, Azure AD,and so on). This section explains both how to configure Foundation Base’s IdP and how to configure an external one.</p>
+<p><em>4.1. Architecture</em></p>
+<p>The following diagram represents a high level view of the IdP architecture:
+As shown in the diagram, the IdP component interacts with AD/LDAP (Active Directory/LDAP) or the
+RSA AM (RSA Authentication Manager).</p>
+<p><em>4.2. Configuration</em></p>
+<p>The following steps describe how to initially set up the IdP using the Data Loader when deploying
+the Foundation Base Umbrella chart:
+IDP authenticators secret should be created beforehand, below shows an example</p>
+<p>apiVersion: v1</p>
+<p>kind: Secret</p>
+<p>metadata: XXXXXXX</p>
+<p>name: sws-login-app-server-authenticators-secret</p>
+<p>namespace: foundation-cluster-zerotrust</p>
+<p>type: Opaque</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
